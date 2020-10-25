@@ -7,8 +7,10 @@ setMethod("eq_calcs", signature(frq='MFCLFrq', par="MFCLPar", rep="MFCLRep"),
 
             age <- 1:dimensions(par)['agecls']
             wgt <- waa(par)/1000
-            m   <- c(aperm(m_at_age(rep), c(4,1,2,3,5,6)))
-            mat <- c(aperm(mat(par), c(4,1,2,3,5,6)))
+            #m   <- c(aperm(m_at_age(rep), c(4,1,2,3,5,6)))
+            m   <- m_at_age(rep)
+            #mat <- c(aperm(mat(par), c(4,1,2,3,5,6)))
+            mat <- mat(par)
 
             alpha <- c(srr(rep)['a'])
             beta  <- c(srr(rep)['b'])
