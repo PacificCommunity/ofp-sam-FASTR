@@ -6,10 +6,8 @@ setMethod("eq_calcs", signature(frq='MFCLFrq', par="MFCLPar", rep="MFCLRep"),
           function(frq, par, rep, inc=0.015, fsh=NULL, fyr=NULL, lyr=NULL, selection=TRUE, ...){
 
             age <- 1:dimensions(par)['agecls']
-            wgt <- waa(par)/1000
-            #m   <- c(aperm(m_at_age(rep), c(4,1,2,3,5,6)))
+            wgt <- c(aperm(mean_waa(rep), c(4,1,2,3,5,6)))  #waa(par)
             m   <- m_at_age(rep)
-            #mat <- c(aperm(mat(par), c(4,1,2,3,5,6)))
             mat <- mat(par)
 
             alpha <- c(srr(rep)['a'])

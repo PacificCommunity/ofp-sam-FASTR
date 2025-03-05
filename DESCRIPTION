@@ -1,7 +1,7 @@
 Package: FASTR
 Type: Package
 Title: FAME Assessment Toolbox in R (and cpp)
-Version: 1.0
+Version: 1.0.1
 Date: 2018-08-30
 Author: Rob Scott
 Maintainer: Rob Scott <robertsc@spc.int>
